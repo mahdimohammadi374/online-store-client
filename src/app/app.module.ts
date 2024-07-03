@@ -1,10 +1,15 @@
 import { NgModule } from "@angular/core";
-import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
+
+// components
+import { AppComponent } from "./app.component";
+
+// modules
 import { SharedModule } from "./shared/shared.module";
 import { CoreModule } from "./core/core.module";
+import {provideHttpClient } from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -15,9 +20,9 @@ import { CoreModule } from "./core/core.module";
       AppRoutingModule,
       BrowserAnimationsModule,
       SharedModule,
-      CoreModule
+      CoreModule,
     ],
-    providers: [],
+    providers: [provideHttpClient()],
     bootstrap: [AppComponent]
   })
   export class AppModule { }

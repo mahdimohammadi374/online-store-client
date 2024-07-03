@@ -1,3 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/fonts.scss";
 @import "../node_modules/bootstrap/dist/css/bootstrap.rtl.css";
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+body {
+  font-family: IRANSans !important;
+  line-height: 1.5;
+  direction: rtl;
+}
