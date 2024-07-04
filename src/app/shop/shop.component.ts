@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopService } from './shop.service';
+import { IPagination } from '../shared/Models/IPagination';
+import { IProduct } from '../shared/Models/IProduct';
 
 @Component({
   selector: 'app-shop',
@@ -7,6 +9,7 @@ import { ShopService } from './shop.service';
   styleUrl: './shop.component.scss'
 })
 export class ShopComponent implements OnInit{
+  data:IPagination<IProduct>;
 constructor(private shopService:ShopService){}
 
 
@@ -15,6 +18,10 @@ constructor(private shopService:ShopService){}
   }
 
   private getProducts() {
-    this.shopService.getProducts().subscribe();
+    this.shopService.getProducts().subscribe({
+      next:(response)=>{
+        this.data=response;
+      }
+    });
   }
 }
