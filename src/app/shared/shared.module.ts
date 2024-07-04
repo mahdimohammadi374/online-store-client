@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardShopComponent } from './components/card-shop/card-shop.component';
 
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -10,9 +10,11 @@ import { CardShopComponent } from './components/card-shop/card-shop.component';
   ],
   imports: [
     CommonModule,
+    MatSidenavModule
   ],
   exports:[
-    CardShopComponent
+    CardShopComponent,
+    MatSidenavModule
   ]
 })
 export class SharedModule { }

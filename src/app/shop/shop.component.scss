@@ -1,0 +1,16 @@
+mat-sidenav-container, mat-sidenav,mat-sidenav-content{
+    // height: 100vh;
+}
+mat-sidenav{
+    width: 260px;
+    padding: 2px;
+    margin-left: 20px;
+}
+mat-sidenav-content{
+    min-height: 400px;
+    padding: 0px  15px;
+    overflow: hidden;
+    @media (min-width:960px) {
+        padding-right: 265px;
+    }
+}
